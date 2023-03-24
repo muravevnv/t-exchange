@@ -1,0 +1,87 @@
+.contacts {
+  padding: 133px 0 132px;
+  overflow: hidden;
+
+  @include media(sm) {
+    padding: 64px 0;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &-list {
+    display: flex;
+    gap: 24px;
+
+    @include media(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @include media(xs) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #212628;
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+    min-height: 136px;
+    transition: transform .5s;
+    position: relative;
+
+    &::before {
+      content: url('../images/contacts-light.png');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.4);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: transform .4s;
+      z-index: -1;
+    }
+
+    @include media(sm) {
+      min-height: 100px;
+    }
+
+    &:hover {
+      transform: translateY(-20px);
+      filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.25));
+      transition: transform .5s;
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform .4s;
+      }
+    }
+
+    &-ico {
+      margin-right: 12px;
+
+      svg {
+        display: block;
+        width: 32px;
+        height: 32px ;
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+
+}
