@@ -16,7 +16,7 @@
 
   &__logo {
     display: block;
-    margin-right: 190px;
+    margin-right: 40px;
 
     @include media(sm) {
       margin-right: 40px;
@@ -26,6 +26,7 @@
   &__nav {
     max-width: 272px;
     width: 100%;
+    margin: 0 auto;
 
     &-list {
       width: 100%;
@@ -38,7 +39,7 @@
     &-item {
 
       &:hover {
-        
+
         > a {
           color: var(--color-primary);
         }

@@ -38,8 +38,8 @@
     position: relative;
 
     &::before {
-      content: url('../images/contacts-light.png');
       position: absolute;
+      content: '';
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(.4);
@@ -48,6 +48,9 @@
       pointer-events: none;
       transition: transform .4s;
       z-index: -1;
+      width: 30vw;
+      height: 30vw;
+      background: url('../images/contacts-light.png') center center / contain no-repeat;
     }
 
     @include media(sm) {

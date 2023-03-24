@@ -194,7 +194,7 @@ ul:not([class]) li:not(:last-child) {
 }
 .header__logo {
   display: block;
-  margin-right: 190px;
+  margin-right: 40px;
 }
 @media (max-width: 767px) {
   .header__logo {
@@ -204,6 +204,7 @@ ul:not([class]) li:not(:last-child) {
 .header__nav {
   max-width: 272px;
   width: 100%;
+  margin: 0 auto;
 }
 .header__nav-list {
   width: 100%;
@@ -644,8 +645,8 @@ ul:not([class]) li:not(:last-child) {
   position: relative;
 }
 .contacts__item::before {
-  content: url("../images/contacts-light.png");
   position: absolute;
+  content: "";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.4);
@@ -654,6 +655,9 @@ ul:not([class]) li:not(:last-child) {
   pointer-events: none;
   transition: transform 0.4s;
   z-index: -1;
+  width: 30vw;
+  height: 30vw;
+  background: url("../images/contacts-light.png") center center/contain no-repeat;
 }
 @media (max-width: 767px) {
   .contacts__item {
